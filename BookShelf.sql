@@ -1,4 +1,3 @@
--- Criar o banco de dados com suporte a caracteres especiais
 CREATE DATABASE bookshelf_db CHARACTER SET utf8mb4 
 COLLATE utf8mb4_unicode_ci;
 
@@ -16,11 +15,12 @@ CREATE TABLE usuarios (
 -- Tabela de livros
 CREATE TABLE livros (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id INT NOT NULL,
     titulo VARCHAR(255) NOT NULL,
     autor VARCHAR(255),
     editora VARCHAR(255),
-    categoria VARCHAR(255),
-    capa_url TEXT,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+    categoria VARCHAR(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+select * from usuarios;
+select * from livros;
+
